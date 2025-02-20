@@ -1,14 +1,11 @@
-let sentence = "U";
-sentence = sentence.toLowerCase();
+let object = {
+  hour: 0,
+  minute: 0,
+  second: 0,
+};
 
-let count = ["a", "e", "i", "o", "u"];
-let countValue = true;
-for (i = 0; i < count.length; i++) {
-  if (sentence.includes(count[i])) {
-    countValue = true;
-  } else {
-    countValue = false;
-  }
-}
+let totalSec = 120;
 
-console.log(countValue);
+object.minute = totalSec / 60;
+
+console.log(object);

@@ -66,17 +66,17 @@
 // }
 
 // another way
-// let str1 = "aeiou fdfuyi flidjfkd dfhkd";
-// let str = str1.toLowerCase();
+// let str = "aeiou dhf fjdlf";
+// str = str.toLowerCase();
 
 // let vowels = ["a", "e", "i", "o", "u"];
 
 // for (let i of str) {
 //   let idx = vowels.indexOf(i);
+//   console.log(idx);
 //   if (idx !== -1) {
 //     vowels.splice(idx, 1);
 //   }
-//   console.log(vowels);
 // }
 
 // if (vowels.length === 0) {

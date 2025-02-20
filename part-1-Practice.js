@@ -24,8 +24,6 @@
 
 //task-3
 // Write a function to count the number of vowels in a string.
-
-// need to solve this problem
 // let str = "aeiou aeiouaeiou fdfofdk ";
 // str = str.toLowerCase();
 
