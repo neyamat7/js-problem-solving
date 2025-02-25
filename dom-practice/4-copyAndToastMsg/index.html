@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind css cdn link -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Change bg with Rgb</title>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+        --animate-fade-out-scale: fade-in-scale 0.3s ease-out;
+
+        @keyframes fade-in-scale {
+          0% {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        @keyframes fade-out-scale {
+          0% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateX(100%);
+          }
+        }
+      }
+
+      .ani {
+        transform: translateX(150%);
+      }
+    </style>
+  </head>
+  <body
+    id="root"
+    class="flex flex-col text-center h-screen justify-center overflow-x-clip"
+  >
+    <h1 class="text-4xl mb-5 font-semibold">
+      Click the button to change the background color
+    </h1>
+    <p>
+      <input
+        id="output-color"
+        class="border rounded-md mb-5 px-3 py-2 bg-white text-center text-lg font-medium mr-1"
+        type="text"
+        value="#ffffff"
+        disabled
+      />
+      <button
+        id="copyBtn"
+        class="text-xl border px-3 py-2 rounded-md text-center cursor-pointer active:bg-slate-600 active:text-white"
+        title="copy to clipboard"
+      >
+        copy
+      </button>
+    </p>
+    <button
+      id="changeColorButton"
+      class="text-lg border py-3 w-[200px] cursor-pointer mx-auto rounded-md hover:bg-slate-600 hover:text-white transition-all duration-300"
+    >
+      Click to Change
+    </button>
+    <!-- toast message -->
+    <div
+      id="toast"
+      class="absolute top-10 right-10 text-xl bg-green-500 px-6 py-3 text-white ani"
+    >
+      <span>Toast Message!</span>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
