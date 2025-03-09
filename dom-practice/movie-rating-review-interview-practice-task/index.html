@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Rating Review</title>
+    <!-- tailwind link -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- script links -->
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="bg-slate-900 text-white text-4xl p-4 text-center">
+      <h1>Movie Review Rating</h1>
+    </div>
+    <div class="px-7 max-w-screen-xl mx-auto">
+      <!-- total movies, ratings and reviews -->
+      <div class="flex gap-16 justify-center mt-12">
+        <p
+          id="total-movie"
+          class="bg-slate-300 font-semibold p-4 rounded-2xl text-2xl"
+        >
+          100
+        </p>
+        <p
+          id="total-rating"
+          class="bg-slate-300 font-semibold p-4 rounded-2xl text-2xl"
+        >
+          70
+        </p>
+        <p
+          id="average-rating"
+          class="bg-slate-300 font-semibold p-4 rounded-2xl text-2xl"
+        >
+          40.4
+        </p>
+
+        <p
+          id="total-review"
+          class="bg-slate-300 font-semibold p-4 rounded-2xl text-2xl"
+        >
+          65
+        </p>
+      </div>
+
+      <!-- movie reviews -->
+      <div>
+        <div class="flex gap-4 items-center">
+          <h1 class="text-4xl font-semibold mb-5 mt-12">Movie Reviews</h1>
+          <div class="mt-7">|</div>
+          <button
+            id="rating-sort"
+            class="text-2xl font-semibold mb-5 mt-12 hover:underline"
+          >
+            Sort By Rating
+          </button>
+          <div class="mt-7">|</div>
+          <button
+            id="group"
+            class="text-2xl font-semibold mb-5 mt-12 hover:underline"
+          >
+            Group
+          </button>
+        </div>
+        <div id="show-movie-list">
+          <ul class="flex flex-col gap-4">
+            <!-- <li class="bg-slate-300 p-2 rounded-md">
+              <h1 class="text-3xl font-medium">Breaking Bad</h1>
+              <p class="text-lg">
+                <span class="font-medium">Peter D</span> has given 3 rating
+                with a comment, I am an Breaking Bad fan... Big fan
+              </p>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- *
+     *
+     *
+     *
+     *
+     *
+     * 
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     
+      -->
+    <!-- script link -->
+  </body>
+</html>

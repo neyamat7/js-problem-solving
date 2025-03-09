@@ -1,0 +1,83 @@
+// Write a javaScript function countDigits  that takes a parameter as an integer and returns  the number of digits in this parameter.
+
+// Example 1:
+// Input: 59863
+// Output: 5
+
+// Constraints:
+// You cannot change the type of value. Like, Cannot convert an integer into string.
+
+// function countDigits(intVal) {
+//   if (typeof intVal !== "number" || !Number.isInteger(intVal)) {
+//     return "invalid";
+//   }
+
+//   let initialValue = 10;
+//   let digitCount = 1;
+
+//   function compareValue() {
+//     if (intVal > initialValue) {
+//       digitCount++;
+//       initialValue = initialValue * 10;
+//       if (intVal > initialValue) {
+//         compareValue();
+//       } else if (intVal === initialValue) {
+//         digitCount++;
+//         return digitCount;
+//       }
+//     } else if (intVal === initialValue) {
+//       digitCount++;
+//       return digitCount;
+//     }
+//   }
+//   compareValue();
+//   return digitCount;
+// }
+// console.log(countDigits(59863));
+// console.log(typeof countDigits(100));
+// console.log(countDigits());
+
+//************************ */
+
+function countDigits(intVal) {
+  if (typeof intVal !== "number" || !Number.isInteger(intVal)) {
+    return "invalid";
+  }
+
+  let initialValue = 10;
+  let digitCount = 1;
+
+  for (let i = 0; i <= intVal; i++) {
+    if (intVal > initialValue) {
+      digitCount++;
+      initialValue = initialValue * 10;
+      for (let j = 0; j < 1; j++) {
+        if (intVal > initialValue) {
+          continue;
+        } else if (intVal === initialValue) {
+          digitCount++;
+          return digitCount;
+        }
+      }
+    } else if (intVal === initialValue) {
+      digitCount++;
+      return digitCount;
+    } else {
+      return digitCount;
+    }
+  }
+}
+console.log(countDigits(59863));
+console.log(countDigits(0));
+console.log(countDigits(1));
+console.log(countDigits(7));
+console.log(countDigits(10));
+console.log(countDigits(100));
+console.log(countDigits(1000));
+console.log(countDigits(10000));
+console.log(countDigits(465732));
+console.log(countDigits("3"));
+console.log(countDigits(""));
+console.log(countDigits());
+console.log(countDigits([]));
+console.log(countDigits(4.5));
