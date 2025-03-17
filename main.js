@@ -1,22 +1,32 @@
-// Write a JavaScript function called removeDuplicate that takes an array as input and removes all duplicate elements while keeping the order of the first occurrences. The function should return a new array containing only unique elements.
+// Write a JavaScript function called replaceAllOccurrences that replaces all occurrences of a character in a given string with a new character.
 
-// Example :
-// Input : [1, 3, 3, 3, 1, 5, 6, 7, 8, 1]
-// Output: [1, 3, 5, 6, 7, 8]
+// Input
+// replaceAllOccurrences("hello world", "o", "0");
 
-function removeDuplicate(arr) {
-  if (!Array.isArray(arr) || arr.length < 1) {
+// Output: "hell0 w0rld"
+
+// Explanation:
+// In the string "hello world", all occurrences of the character "o" are replaced with "0", resulting in "hell0 w0rld".
+
+function replaceAllOccurrences(str, char, newChar) {
+  if (typeof str !== "string") {
     return "invalid input";
   }
+  let newStr = "";
 
-  const newArray = [];
-  for (const singleElement of arr) {
-    console.log(singleElement);
-    if (!newArray.includes(singleElement)) {
-      newArray.push(singleElement);
+  for (const letter of str) {
+    if (letter === char) {
+      newStr += newChar;
+    } else {
+      newStr += letter;
     }
   }
-  return newArray;
+
+  return newStr;
 }
 
-console.log(removeDuplicate([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+console.log(replaceAllOccurrences("hello world", "o", "0"));
+console.log(replaceAllOccurrences("hello world", "o", "p"));
+console.log(replaceAllOccurrences("hello world", "h", "k"));
+console.log(replaceAllOccurrences("hello world", 0, "w"));
+console.log(replaceAllOccurrences(4, "0", "w"));
