@@ -1,32 +1,26 @@
-// Write a JavaScript function called replaceAllOccurrences that replaces all occurrences of a character in a given string with a new character.
+// Write a JavaScript function called findFactorial that calculates the factorial of a given number
 
-// Input
-// replaceAllOccurrences("hello world", "o", "0");
+// input: 5
+// output: 120
 
-// Output: "hell0 w0rld"
+// input: 3
+// output: 6
 
-// Explanation:
-// In the string "hello world", all occurrences of the character "o" are replaced with "0", resulting in "hell0 w0rld".
+// input: 7
+// output: 5040
 
-function replaceAllOccurrences(str, char, newChar) {
-  if (typeof str !== "string") {
-    return "invalid input";
+
+function findFactorial(num) {
+  if (num < 0) {
+    return "invalid";
+  } else if (num === 0) {
+    return 1;
   }
-  let newStr = "";
-
-  for (const letter of str) {
-    if (letter === char) {
-      newStr += newChar;
-    } else {
-      newStr += letter;
-    }
+  let factorial = num;
+  for (let i = num - 1; i >= 1; i--) {
+    factorial *= i;
   }
-
-  return newStr;
+  return factorial;
 }
 
-console.log(replaceAllOccurrences("hello world", "o", "0"));
-console.log(replaceAllOccurrences("hello world", "o", "p"));
-console.log(replaceAllOccurrences("hello world", "h", "k"));
-console.log(replaceAllOccurrences("hello world", 0, "w"));
-console.log(replaceAllOccurrences(4, "0", "w"));
+console.log(findFactorial(5));
